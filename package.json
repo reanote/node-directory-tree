@@ -1,6 +1,6 @@
 {
   "name": "tree-files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert a directory tree files to a JSON object.",
   "repository": {
     "type": "git",
