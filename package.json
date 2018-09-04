@@ -1,10 +1,10 @@
 {
-  "name": "directory-tree",
-  "version": "2.1.0",
-  "description": "Convert a directory tree to a JS object.",
+  "name": "tree-files",
+  "version": "1.0.0",
+  "description": "Convert a directory tree files to a JSON object.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mihneadb/node-directory-tree"
+    "url": "https://github.com/reanote/tree-files"
   },
   "keywords": [
     "directory",
@@ -14,9 +14,9 @@
   "author": "Mihnea Dobrescu-Balaur",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mihneadb/node-directory-tree/issues"
+    "url": "https://github.com/reanote/tree-files/issues"
   },
-  "homepage": "https://github.com/mihneadb/node-directory-tree",
+  "homepage": "https://github.com/reanote/tree-files",
   "dependencies": {},
   "devDependencies": {
     "chai": "^2.3.0",
