@@ -1,19 +1,19 @@
-[![Build Status](https://travis-ci.org/mihneadb/node-directory-tree.svg)](https://travis-ci.org/mihneadb/node-directory-tree)
+[![Build Status](https://travis-ci.org/reanote/tree-files.svg)](https://travis-ci.org/reanote/tree-files)
 
-# directory-tree
+# tree-files
 
 Creates a JavaScript object representing a directory tree.
 
 ## Install
 
 ```bash
-$ npm install directory-tree
+$ npm install tree-files
 ```
 
 ## Usage
 
 ```js
-const dirTree = require("directory-tree");
+const dirTree = require("tree-files");
 const tree = dirTree("/some/path");
 ```
 
@@ -21,14 +21,14 @@ And you can also filter by an extensions regex:
 This is useful for including only certain types of files.
 
 ```js
-const dirTree = require("directory-tree");
+const dirTree = require("tree-files");
 const filteredTree = dirTree("/some/path", { extensions: /\.txt/ });
 ```
 
 Example for filtering multiple extensions with Regex.
 
 ```js
-const dirTree = require("directory-tree");
+const dirTree = require("tree-files");
 const filteredTree = dirTree("/some/path", {
   extensions: /\.(md|js|html|java|py|rb)$/
 });
@@ -37,22 +37,21 @@ const filteredTree = dirTree("/some/path", {
 You can also exclude paths from the tree using a regex:
 
 ```js
-const dirTree = require("directory-tree");
+const dirTree = require("tree-files");
 const filteredTree = dirTree("/some/path", { exclude: /some_path_to_exclude/ });
-```
 
 A callback function can be executed with each file and **each directory** that matches the extensions provided:
 
 ```js
 const PATH = require("path");
-const dirTree = require("directory-tree");
+const dirTree = require("tree-files");
 
 const tree = dirTree(
   "./test/test_data",
   { extensions: /\.txt$/ },
   (item, PATH) => {
        console.log('file info:', JSON.stringify(item));
-  }, 
+  },
   (item, Path) => {
        console.log('directory info:', JSON.stringify(item));
   }
