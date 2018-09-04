@@ -41,7 +41,7 @@ const dirTree = require("directory-tree");
 const filteredTree = dirTree("/some/path", { exclude: /some_path_to_exclude/ });
 ```
 
-A callback function can be executed with each file that matches the extensions provided:
+A callback function can be executed with each file and **each directory** that matches the extensions provided:
 
 ```js
 const PATH = require("path");
@@ -51,7 +51,10 @@ const tree = dirTree(
   "./test/test_data",
   { extensions: /\.txt$/ },
   (item, PATH) => {
-    console.log(item);
+       console.log('file info:', JSON.stringify(item));
+  }, 
+  (item, Path) => {
+       console.log('directory info:', JSON.stringify(item));
   }
 );
 ```
